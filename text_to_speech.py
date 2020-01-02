@@ -21,7 +21,7 @@ def textToSpeech():
     myobj = gTTS(text=mytext, lang=language, slow=False) 
 
     # Saving the converted audio in a mp3 file named  
-    out="output_audio/welcome.wav"
+    out="output_audio/welcome.mp3"
     myobj.save(out) 
     #Playing audio
     print("Playing audio.....")

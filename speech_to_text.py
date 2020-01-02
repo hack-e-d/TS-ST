@@ -1,14 +1,8 @@
-from os import path
-from pydub import AudioSegment
-import speech_recognition as sr 
-import soundfile as sf        
-
-    
-# use the audio file as the audio source 
-wav_path = "sample.wav"
- 
-r = sr.Recognizer() 
-print(r)
-with sr.AudioFile(wav_path) as source:
-    audio = r.record(source) 
-r.recognize_google(audio)
+import speech_recognition as sr
+print(sr.__version__) # just to print the version not required
+r = sr.Recognizer()
+harvard = sr.AudioFile('input_audio/1.wav')
+with harvard as source:
+    audio = r.record(source)
+print(type(audio))
+print(r.recognize_google(audio))
