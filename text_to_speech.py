@@ -3,8 +3,8 @@ import os
 from playsound import playsound
 
 #Function definition
-def playSong(mood):
-    playsound(mood)
+def playSong(variable):
+    playsound(variable)
 
 def textToSpeech():
     mytext=""
